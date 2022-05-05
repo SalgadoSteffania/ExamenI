@@ -38,6 +38,7 @@ namespace Infraestructure
             using (WebClient web = new WebClient())
             {
                 string url = $@"https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=current,minutely,hourly,alerts&appid={APIKEY}";
+
                 var json = web.DownloadString(url);
                 forecastInfo = JsonConvert.DeserializeObject<ForecastInfo>(json);
             }

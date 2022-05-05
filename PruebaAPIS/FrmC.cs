@@ -23,6 +23,7 @@ namespace PruebaAPIS
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 var climas = wheaterser.GetWeather(textBox1.Text);
@@ -43,12 +44,18 @@ namespace PruebaAPIS
                 flowLayoutPanel1.Controls.Clear();
                 ShowForecast();
 
+
+
+               
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);;
                 
             }
+
+
         }
 
         private void FrmCurrentTemperature_Load(object sender, EventArgs e)
@@ -65,10 +72,15 @@ namespace PruebaAPIS
                 frmForecast.pictureBox1.ImageLocation = wheaterser.GetImageLocation(forecast.daily[i].weather[0]);
                 frmForecast.lblDescription.Text = forecast.daily[i].weather[0].description;
                 frmForecast.lblWeather.Text = forecast.daily[i].weather[0].main;
-                frmForecast.lblDay.Text = wheaterser.convertToDateTime(forecast.daily[i].dt).DayOfWeek.ToString();
+                frmForecast.lblDay.Text = wheaterser.convertToDateTime(forecast.daily[i].dt).ToShortTimeString();
                 flowLayoutPanel1.Controls.Add(frmForecast);
+
                 frmForecast.Show();
             }
         }
+
+
+    
+
     }
 }

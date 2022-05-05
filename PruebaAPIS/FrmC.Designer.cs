@@ -249,7 +249,7 @@
             this.lblTemp.BackColor = System.Drawing.Color.Transparent;
             this.lblTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTemp.ForeColor = System.Drawing.Color.White;
-            this.lblTemp.Location = new System.Drawing.Point(131, 69);
+            this.lblTemp.Location = new System.Drawing.Point(153, 78);
             this.lblTemp.Name = "lblTemp";
             this.lblTemp.Size = new System.Drawing.Size(68, 73);
             this.lblTemp.TabIndex = 18;
@@ -330,9 +330,9 @@
             // pbWeather
             // 
             this.pbWeather.BackColor = System.Drawing.Color.Transparent;
-            this.pbWeather.Location = new System.Drawing.Point(45, 88);
+            this.pbWeather.Location = new System.Drawing.Point(14, 56);
             this.pbWeather.Name = "pbWeather";
-            this.pbWeather.Size = new System.Drawing.Size(80, 80);
+            this.pbWeather.Size = new System.Drawing.Size(144, 128);
             this.pbWeather.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbWeather.TabIndex = 25;
             this.pbWeather.TabStop = false;
@@ -360,7 +360,7 @@
             this.flowLayoutPanel1.TabIndex = 27;
             this.flowLayoutPanel1.WrapContents = false;
             // 
-            // FrmCurrentTemperature
+            // FrmC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -393,7 +393,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
-            this.Name = "FrmCurrentTemperature";
+            this.Name = "FrmC";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmCurrentTemperature_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbWeather)).EndInit();
